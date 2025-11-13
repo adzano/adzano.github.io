@@ -1,0 +1,33 @@
+# Kiro IDE
+.kiro/
+
+# VS Code
+.vscode/
+
+# Testing files
+test-validation.html
+run-tests.js
+TEST_REPORT.txt
+MANUAL_TESTING_GUIDE.md
+TESTING_CHECKLIST.md
+TESTING_SUMMARY.md
+QUICK_TEST_GUIDE.md
+
+# Development documentation
+OPTIMIZATION_REPORT.md
+
+# Old HTML files (if using single-page design)
+about.html
+experience.html
+projects.html
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node modules (if you add npm later)
+node_modules/
+package-lock.json

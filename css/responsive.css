@@ -1,0 +1,482 @@
+/* ===================================
+   RESPONSIVE DESIGN
+   Media Queries for Mobile, Tablet, and Desktop
+   =================================== */
+
+/* ===================================
+   MOBILE STYLES (< 768px)
+   =================================== */
+@media (max-width: 767px) {
+  /* Typography adjustments */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  /* Section padding */
+  .section {
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+  }
+  
+  /* Hero section mobile */
+  .hero-section {
+    min-height: 100vh;
+    padding: 100px var(--spacing-sm) var(--spacing-lg);
+  }
+  
+  .hero-content {
+    gap: var(--spacing-sm);
+  }
+  
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .typing-subtitle {
+    font-size: 1.75rem;
+    min-height: 2.5rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    object-position: center 20%;
+  }
+  
+  .social-links {
+    gap: var(--spacing-sm);
+  }
+  
+  .social-links a {
+    width: 44px;
+    height: 44px;
+    font-size: 1.125rem;
+  }
+  
+  /* Button sizing for touch targets */
+  .btn-primary {
+    padding: 14px 28px;
+    font-size: 1rem;
+    min-height: 44px;
+  }
+  
+  /* Card grids - single column */
+  .card-grid,
+  .card-grid-2,
+  .experience-grid,
+  .certifications-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  /* Card adjustments */
+  .card {
+    padding: var(--spacing-md);
+  }
+  
+  .cert-card {
+    padding: var(--spacing-md);
+  }
+  
+  .project-card {
+    padding: var(--spacing-md);
+  }
+  
+  /* Navigation mobile */
+  header {
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 75%;
+    max-width: 300px;
+    background: var(--bg-section);
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-xl);
+    box-shadow: -5px 0 15px var(--shadow);
+    transition: right 0.4s ease-in-out;
+    z-index: 999;
+  }
+  
+  nav ul.open {
+    right: 0;
+  }
+  
+  nav ul li a {
+    font-size: 1.25rem;
+    padding: var(--spacing-sm);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav ul li a::after {
+    display: none;
+  }
+  
+  /* Footer mobile */
+  .footer-social {
+    gap: var(--spacing-sm);
+  }
+  
+  .footer-social a {
+    width: 44px;
+    height: 44px;
+  }
+  
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  /* About section mobile */
+  .about-content p {
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  /* Tech tags mobile */
+  .tech-tags {
+    gap: 6px;
+  }
+  
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+  
+  /* Project links mobile */
+  .project-links {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .project-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Certification card mobile */
+  .cert-badge {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .cert-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ===================================
+   TABLET STYLES (768px - 1024px)
+   =================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Typography adjustments */
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  /* Hero section tablet */
+  .hero-section {
+    padding: 110px var(--spacing-md) var(--spacing-xl);
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .typing-subtitle {
+    font-size: 2rem;
+    min-height: 3rem;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    object-position: center 20%;
+  }
+  
+  /* Two-column grids for tablet */
+  .card-grid,
+  .experience-grid,
+  .certifications-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+  
+  /* Card grid 2 stays at 2 columns */
+  .card-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Container adjustments */
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  /* Navigation tablet */
+  nav ul {
+    gap: var(--spacing-md);
+  }
+  
+  nav ul li a {
+    font-size: 0.9375rem;
+  }
+  
+  /* About section tablet */
+  .about-content {
+    max-width: 700px;
+  }
+  
+  .about-content p {
+    font-size: 1.0625rem;
+  }
+}
+
+/* ===================================
+   DESKTOP STYLES (> 1024px)
+   =================================== */
+@media (min-width: 1025px) {
+  /* Three-column grids for desktop */
+  .card-grid,
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+  }
+  
+  /* Two-column for experience and certifications */
+  .experience-grid,
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  /* Larger screens - 3 columns for certifications */
+  @media (min-width: 1200px) {
+    .certifications-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Hero section desktop */
+  .hero-section {
+    padding: 120px var(--spacing-md) var(--spacing-xl);
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .typing-subtitle {
+    font-size: 2.5rem;
+    min-height: 3.5rem;
+  }
+  
+  .profile-image {
+    width: 180px;
+    height: 180px;
+    object-position: center 20%;
+  }
+  
+  /* Navigation desktop */
+  nav ul {
+    gap: var(--spacing-lg);
+  }
+  
+  /* Hamburger hidden on desktop */
+  .hamburger {
+    display: none;
+  }
+}
+
+/* ===================================
+   LARGE DESKTOP (> 1440px)
+   =================================== */
+@media (min-width: 1441px) {
+  /* Increase max-width for larger screens */
+  .container {
+    max-width: 1400px;
+  }
+  
+  /* Hero adjustments */
+  .hero-section {
+    padding: 140px var(--spacing-md) var(--spacing-xl);
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  
+  .typing-subtitle {
+    font-size: 3rem;
+    min-height: 4rem;
+  }
+  
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Section title */
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+/* ===================================
+   EXTRA SMALL DEVICES (< 375px)
+   =================================== */
+@media (max-width: 374px) {
+  /* Further reduce typography */
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.25rem;
+  }
+  
+  .typing-subtitle {
+    font-size: 1.5rem;
+    min-height: 2.2rem;
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    object-position: center top;
+  }
+  
+  /* Reduce spacing */
+  .section {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .card,
+  .cert-card,
+  .project-card {
+    padding: var(--spacing-sm);
+  }
+  
+  /* Mobile menu width */
+  nav ul {
+    width: 85%;
+  }
+}
+
+/* ===================================
+   LANDSCAPE MOBILE (height < 500px)
+   =================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    object-position: center 20%;
+  }
+  
+  .hero-content {
+    gap: var(--spacing-xs);
+  }
+  
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .typing-subtitle {
+    font-size: 1.25rem;
+    min-height: 2rem;
+  }
+  
+  .social-links {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+@media print {
+  header {
+    position: static;
+  }
+  
+  .hamburger,
+  .social-links,
+  .footer-social,
+  .btn-primary,
+  .card-link,
+  .project-link,
+  .cert-link {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+  }
+}
+
+/* ===================================
+   SCROLL TO TOP BUTTON RESPONSIVE
+   =================================== */
+@media (max-width: 767px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.125rem;
+  }
+}
