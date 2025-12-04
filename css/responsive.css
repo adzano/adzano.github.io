@@ -163,6 +163,21 @@
     text-align: left;
   }
   
+  /* Stats mobile */
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+  
   /* Tech tags mobile */
   .tech-tags {
     gap: 6px;
